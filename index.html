@@ -3,219 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arman's Portfolio</title>
+
+<title>Arman's Creation | Premium Web Developer & Freelancer</title>
+<meta name="description" content="Arman's Creation - Professional Web Developer & Freelancer from Bangladesh. Premium websites, SEO optimization & branding solutions.">
+<meta name="keywords" content="Arman Web Developer, Freelancer Bangladesh, SEO Expert, Website Designer">
+<meta name="author" content="Arman">
+
+<!-- Advanced SEO Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Arman",
+ "url": "https://yourwebsite.com",
+ "jobTitle": "Web Developer & Freelancer",
+ "sameAs": [
+   "https://www.facebook.com/armanscreation10"
+ ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+    --bg:#f4f7ff;
+    --text:#111;
+    --primary:#6C63FF;
+    --glass:rgba(255,255,255,0.2);
+}
+
+body.dark{
+    --bg:#0f0f1a;
+    --text:#fff;
+    --glass:rgba(255,255,255,0.05);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#f4f7fa;
-    color:#333;
+    background:var(--bg);
+    color:var(--text);
+    transition:0.4s;
 }
 
 header{
-    background:#111;
-    color:#fff;
-    padding:20px 10%;
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
-    align-items:center;
-}
-
-header h1{
-    font-size:24px;
+    backdrop-filter:blur(15px);
+    background:var(--glass);
+    z-index:1000;
 }
 
 nav a{
-    color:#fff;
+    margin-left:25px;
     text-decoration:none;
-    margin-left:20px;
-    transition:0.3s;
+    color:var(--text);
+    font-weight:500;
 }
 
-nav a:hover{
-    color:#00bcd4;
-}
-
-.hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');
-    background-size:cover;
-    background-position:center;
+.toggle{
+    background:var(--primary);
     color:#fff;
-}
-
-.hero h2{
-    font-size:48px;
-}
-
-.hero p{
-    margin:15px 0;
-    font-size:18px;
-}
-
-.hero button{
-    padding:12px 30px;
     border:none;
-    background:#00bcd4;
-    color:#fff;
-    font-size:16px;
+    padding:6px 15px;
+    border-radius:20px;
     cursor:pointer;
-    border-radius:5px;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    background:#0097a7;
 }
 
 section{
-    padding:80px 10%;
+    padding:100px 10%;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
 }
 
-section h2{
-    margin-bottom:40px;
-    font-size:32px;
+.hero h1{
+    font-size:50px;
 }
 
-.about p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.6;
+.hero span{
+    color:var(--primary);
 }
 
-.services{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-}
-
-.service-box{
-    background:#fff;
-    padding:30px;
-    width:30%;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:var(--primary);
+    color:#fff;
+    cursor:pointer;
     transition:0.3s;
 }
 
-.service-box:hover{
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* Glass Card */
+.card{
+    background:var(--glass);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
     transform:translateY(-10px);
 }
 
-.contact form{
-    max-width:500px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-.contact input, .contact textarea{
-    padding:12px;
+/* Skills */
+.skill{
     margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
 }
 
-.contact button{
-    padding:12px;
-    border:none;
-    background:#111;
-    color:#fff;
-    cursor:pointer;
-    border-radius:5px;
+.progress{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
 }
 
-footer{
-    background:#111;
-    color:#fff;
+.progress-bar{
+    height:8px;
+    background:var(--primary);
+    width:0;
+    transition:2s;
+}
+
+/* Pricing */
+.price{
+    font-size:30px;
+    color:var(--primary);
+    margin:15px 0;
+}
+
+/* Testimonials */
+.testimonial{
     text-align:center;
-    padding:20px;
+}
+
+.testimonial p{
+    font-style:italic;
+}
+
+/* Scroll Animation */
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    background:var(--glass);
 }
 
 @media(max-width:768px){
-    .services{
-        flex-direction:column;
-    }
-    .service-box{
-        width:100%;
-    }
-    .hero h2{
-        font-size:32px;
-    }
+.hero h1{font-size:32px;}
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Arman</h1>
+    <h2>Arman's Creation</h2>
     <nav>
-        <a href="#">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
+        <button class="toggle" onclick="toggleMode()">🌙</button>
     </nav>
 </header>
 
-<div class="hero">
-    <h2>Hello, I'm Arman</h2>
-    <p>Web Developer | Designer | Freelancer</p>
-    <button>Hire Me</button>
-</div>
-
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate web developer who creates modern and responsive websites.
-        I love turning ideas into reality using HTML, CSS, and JavaScript.
-    </p>
+<section class="hero">
+    <h1>Hi, I'm <span>Arman</span></h1>
+    <p>Premium Web Developer & SEO Specialist</p>
+    <button class="btn">Hire Me Now</button>
 </section>
 
-<section id="services">
-    <h2>My Services</h2>
-    <div class="services">
-        <div class="service-box">
-            <h3>Web Design</h3>
-            <p>Modern and clean website design for your business.</p>
-        </div>
-        <div class="service-box">
-            <h3>Development</h3>
-            <p>Responsive and fast websites using latest technologies.</p>
-        </div>
-        <div class="service-box">
-            <h3>SEO Optimization</h3>
-            <p>Improve your website ranking on Google.</p>
-        </div>
+<section id="about" class="reveal">
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I build ultra-modern, fast, and SEO-optimized websites that help brands grow online.</p>
     </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<section id="skills" class="reveal">
+<h2>My Skills</h2>
+
+<div class="skill">
+HTML
+<div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+</div>
+
+<div class="skill">
+CSS
+<div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+</div>
+
+<div class="skill">
+SEO
+<div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+</div>
+
+</section>
+
+<section id="projects" class="reveal">
+<h2>Live Projects</h2>
+<div class="grid">
+<div class="card">Business Website</div>
+<div class="card">Ecommerce Store</div>
+<div class="card">Portfolio Website</div>
+</div>
+</section>
+
+<section id="pricing" class="reveal">
+<h2>Freelancer Pricing</h2>
+<div class="grid">
+<div class="card">
+<h3>Basic</h3>
+<div class="price">$99</div>
+<p>1 Page Website</p>
+<button class="btn">Order Now</button>
+</div>
+<div class="card">
+<h3>Standard</h3>
+<div class="price">$199</div>
+<p>5 Page Website</p>
+<button class="btn">Order Now</button>
+</div>
+<div class="card">
+<h3>Premium</h3>
+<div class="price">$399</div>
+<p>Full Business Website + SEO</p>
+<button class="btn">Order Now</button>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<h2>Testimonials</h2>
+<div class="card testimonial">
+<p id="testimonial-text">"Amazing work! Highly recommended freelancer."</p>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<div class="card">
+<h2>Let's Work Together</h2>
+<p>Available for freelance projects worldwide.</p>
+<button class="btn">Contact Me</button>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Arman | All Rights Reserved</p>
+© 2026 Arman's Creation | All Rights Reserved
 </footer>
+
+<script>
+
+/* Dark Mode */
+function toggleMode(){
+    document.body.classList.toggle("dark");
+}
+
+/* Scroll Reveal */
+window.addEventListener("scroll", reveal);
+
+function reveal(){
+    document.querySelectorAll(".reveal").forEach(el=>{
+        let top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+
+/* Skill Animation */
+window.addEventListener("scroll", ()=>{
+    document.querySelectorAll(".progress-bar").forEach(bar=>{
+        let top = bar.getBoundingClientRect().top;
+        if(top < window.innerHeight){
+            bar.style.width = bar.getAttribute("data-width");
+        }
+    });
+});
+
+/* Testimonial Slider */
+const testimonials = [
+"Outstanding SEO results!",
+"Very professional and fast delivery.",
+"Best web developer I have worked with."
+];
+
+let i = 0;
+setInterval(()=>{
+    i = (i+1) % testimonials.length;
+    document.getElementById("testimonial-text").innerText = testimonials[i];
+}, 3000);
+
+</script>
 
 </body>
 </html>
