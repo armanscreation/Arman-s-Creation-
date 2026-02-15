@@ -1,85 +1,221 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Simple Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #333;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman's Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+    color:#333;
+}
+
+header{
+    background:#111;
+    color:#fff;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:24px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00bcd4;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.hero h2{
+    font-size:48px;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.hero button{
+    padding:12px 30px;
+    border:none;
+    background:#00bcd4;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#0097a7;
+}
+
+section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+section h2{
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.services{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.service-box{
+    background:#fff;
+    padding:30px;
+    width:30%;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.service-box:hover{
+    transform:translateY(-10px);
+}
+
+.contact form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+.contact input, .contact textarea{
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact button{
+    padding:12px;
+    border:none;
+    background:#111;
+    color:#fff;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .services{
+        flex-direction:column;
     }
-    header {
-      background: #0d6efd;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+    .service-box{
+        width:100%;
     }
-    nav {
-      background: #084298;
-      padding: 10px;
-      text-align: center;
+    .hero h2{
+        font-size:32px;
     }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
+}
+</style>
+
 </head>
-<body>  <header>
-    <h1>Arman's Creation</h1>
-    <p>A clean & simple website</p>
-  </header>  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </nav>  <div class="container">
-    <div class="card">
-      <h2>About Me</h2>
-      <p>
-        This is a simple website created using only HTML and CSS.
-        You can use it for personal, portfolio, or small business purposes.
-      </p>
-    </div><div class="card">
-  <h2>My Services</h2>
-  <ul>
-    <li>Web Design</li>
-    <li>Content Writing</li>
-    <li>SEO Basics</li>
-  </ul>
+<body>
+
+<header>
+    <h1>Arman</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Hello, I'm Arman</h2>
+    <p>Web Developer | Designer | Freelancer</p>
+    <button>Hire Me</button>
 </div>
 
-<div class="card">
-  <h2>Contact</h2>
-  <p>Email: armanscreation@yahoo.com</p>
-  <p>Phone: +8809649-116116</p>
-</div>
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate web developer who creates modern and responsive websites.
+        I love turning ideas into reality using HTML, CSS, and JavaScript.
+    </p>
+</section>
 
-  </div>  <footer>
-    <p>©
+<section id="services">
+    <h2>My Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Web Design</h3>
+            <p>Modern and clean website design for your business.</p>
+        </div>
+        <div class="service-box">
+            <h3>Development</h3>
+            <p>Responsive and fast websites using latest technologies.</p>
+        </div>
+        <div class="service-box">
+            <h3>SEO Optimization</h3>
+            <p>Improve your website ranking on Google.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Arman | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
